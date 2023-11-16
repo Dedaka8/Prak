@@ -4,6 +4,7 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
 import static org.apache.http.HttpStatus.SC_OK;
+import static org.hamcrest.Matchers.everyItem;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class GetOrdersTest {
@@ -22,6 +23,6 @@ public class GetOrdersTest {
         ValidatableResponse response = orderClient.getOrder();
         response.assertThat()
                 .statusCode(SC_OK)
-                .body("orders", notNullValue());
+                .body("orders.id", everyItem(notNullValue()));
     }
 }

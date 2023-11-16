@@ -19,19 +19,6 @@ public class CourierData {
         this.password = password;
         this.firstName = firstName;
     }
-    public CourierData(String firstParameter, String secondParameter, int type) {
-
-        if(type == 1) {
-            this.login = firstParameter;
-            this.firstName = secondParameter;
-        } else if (type == 2) {
-            this.password = firstParameter;
-            this.firstName = secondParameter;
-        } else {
-            this.login = firstParameter;
-            this.password = secondParameter;
-        }
-    }
 
     public String getLogin() {
         return login;

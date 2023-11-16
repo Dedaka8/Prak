@@ -20,7 +20,7 @@ public class LoginCourierTest {
     private CourierData courier;
 
     @Before
-    public void SetUp() {
+    public void setUp() {
         courierClient = new CourierClient();
         courier = CourierGenerator.getRandomCourier();
         courierClient.createCourier(courier);

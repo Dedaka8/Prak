@@ -18,21 +18,21 @@ public class CourierGenerator {
         String password = RandomStringUtils.randomAlphabetic(10);
         String name = RandomStringUtils.randomAlphabetic(10);
 
-        return new CourierData(password,name,2);
+        return new CourierData(null,password,name);
     }
     @Step("Создание случайного курьера без логина")
     public static CourierData getRandomCourierWithoutPassword(){
         String login = RandomStringUtils.randomAlphabetic(10);
         String name = RandomStringUtils.randomAlphabetic(10);
 
-        return new CourierData(login,name,1);
+        return new CourierData(login,null,name);
     }
     @Step("Создание случайного курьера без имени")
     public static CourierData getRandomCourierWithoutName(){
         String login = RandomStringUtils.randomAlphabetic(10);
         String password = RandomStringUtils.randomAlphabetic(10);
 
-        return new CourierData(login,password,3);
+        return new CourierData(login,password,null);
     }
 
 
